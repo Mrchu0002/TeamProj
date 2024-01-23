@@ -1,13 +1,13 @@
-package TeamProject;
+package testGit;
 
 public class productVO {
     private String name;    //상품명
     private String cateId;  //분류 ID
-    private int cst;    // 가격
-    private int cnt;   // 재고
+    private String cst;    // 가격
+    private String cnt;   // 재고
 
 
-    public productVO(String name, String cateId, int cst, int cnt) {
+    public productVO(String name, String cateId, String cst, String cnt) {
         this.name = name;
         this.cateId = cateId;
         this.cst = cst;
@@ -36,19 +36,19 @@ public class productVO {
         this.cateId = cateId;
     }
 
-    public int getCst() {
+    public String getCst() {
         return cst;
     }
 
-    public void setCst(int cst) {
+    public void setCst(String cst) {
         this.cst = cst;
     }
 
-    public int getCnt() {
+    public String getCnt() {
         return cnt;
     }
 
-    public void setCnt(int cnt) {
+    public void setCnt(String cnt) {
         this.cnt = cnt;
     }
     

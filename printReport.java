@@ -1,5 +1,4 @@
-package TeamProject;
-
+package testGit;
 public class printReport {
     //일일 매출 출력 < 하루 판매 갯수 필요함
 

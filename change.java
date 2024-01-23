@@ -1,4 +1,4 @@
-package TeamProject;
+package testGit;
 
 abstract public class change {
     abstract void buy();  //구매
