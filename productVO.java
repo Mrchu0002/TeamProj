@@ -1,4 +1,4 @@
-package POS;
+package TeamProject;
 
 public class productVO {
     private String name;    //상품명

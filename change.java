@@ -1,4 +1,4 @@
-package POS;
+package TeamProject;
 
 abstract public class change {
     abstract void buy();  //구매
