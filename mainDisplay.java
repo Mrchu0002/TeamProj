@@ -25,6 +25,7 @@ public class mainDisplay {
 
 	public static void main(String[] args) {
 		pos();
+		int regiCnt = 0;
 
 		//
 		Scanner sc = new Scanner(System.in);
@@ -41,52 +42,50 @@ public class mainDisplay {
 					pos();
 					continue;
 				}
-				
-
-				
+				regiCnt++;
 
 				// 전달받은 데이터를 RequestDTO 객체에 담는다.
 				DTO dto = new DTO(posInputs[1], posInputs[2], posInputs[3], posInputs[4]);
-			  
+
 				RegiProd regSrv = new RegiProd();
 				regSrv.regist(dto);
-			  
-				} else if (posInput.compareToIgnoreCase("list") == 0) {
-			  
-					listView lstSrv = new listView();
-			  
+				System.out.println("현재 "+ regiCnt +"개의 상품이 등록되었습니다.");
+
+			} else if (posInput.compareToIgnoreCase("list") == 0) {
+
+				listView lstSrv = new listView();
+
 				// 전체회원정보 목록 출력
 				lstSrv.listview();
-		
-				//System.out.println(dto.getName()+dto.getCateId()+dto.getCst()+dto.getCnt());
+
+				// System.out.println(dto.getName()+dto.getCateId()+dto.getCst()+dto.getCnt());
 
 			} // end of if
 
 			// if (posInput.startsWith("sell")) {
-			// 	if (posInputs.length != 3) {
-			// 		System.out.println("판매명령어 오류 다시입력하세요");
-			// 		continue;
-			// 	}
-
+			// if (posInputs.length != 3) {
+			// System.out.println("판매명령어 오류 다시입력하세요");
+			// continue;
+			// }
 
 			// } else if (posInput.startsWith("buy")) {
-			// 	if (posInputs.length != 3) {
-			// 		System.out.println("구매명령어 오류 다시입력하세요");
-			// 		continue;
-			// 	}
-			// } else if (posInput.startsWith("list")){
-			// 	if(!posInput.startsWith("list")){
-			// 		System.out.println("리스트명령문 오류");
-			// 	}
-			// 	listView lstVi = new listView();
-			// 	lstVi.listview();
-			// 	continue;
-			// } else if(posInput.startsWith("printReport")) {
-			// 	if(posInputs.length != 1){
-			// 		System.out.println("결산명령어 오류 다시입력해주세요");
-			// 	}
+			// if (posInputs.length != 3) {
+			// System.out.println("구매명령어 오류 다시입력하세요");
+			// continue;
 			// }
-			 
+			// } else if (posInput.startsWith("list")){
+			// if(!posInput.startsWith("list")){
+			// System.out.println("리스트명령문 오류");
+			// }
+			// listView lstVi = new listView();
+			// lstVi.listview();
+			// continue;
+			// } else if(posInput.startsWith("printReport")) {
+			// if(posInputs.length != 1){
+			// System.out.println("결산명령어 오류 다시입력해주세요");
+			// }
+			// }
+
 		} // end of while
 	}// end of main
 }
