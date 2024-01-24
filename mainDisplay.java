@@ -49,17 +49,25 @@ public class mainDisplay {
 			if (posInput.startsWith("sell")) {
 				if (posInputs.length != 3) {
 					System.out.println("판매명령어 오류 다시입력하세요");
-					// pos();
 					continue;
 				}
 
 			} else if (posInput.startsWith("buy")) {
 				if (posInputs.length != 3) {
-					System.out.println("판매명령어 오류 다시입력하세요");
-					// pos();
+					System.out.println("구매명령어 오류 다시입력하세요");
 					continue;
 				}
-			} // end of while
-		} // end of main
-	}
+			} else if (posInput.startsWith("list")){
+				if(posInputs.length != 2){
+					System.out.println("목록 명령어 오류 다시입력해주세요");
+					
+				}
+			} else if(posInput.startsWith("printReport")) {
+				if(posInputs.length != 1){
+					System.out.println("결산명령어 오류 다시입력해주세요");
+				}
+			}
+			 
+		} // end of while
+	}// end of main
 }
