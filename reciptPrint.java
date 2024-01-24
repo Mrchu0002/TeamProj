@@ -1,9 +1,6 @@
 package POS;
 
-import java.awt.Desktop;
 import java.awt.GridLayout;
-import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -14,14 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
-
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDFont;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
-import org.apache.pdfbox.pdmodel.font.Standard14Fonts.FontName;
 
 public class reciptPrint extends JFrame {
 
@@ -94,40 +83,7 @@ public class reciptPrint extends JFrame {
 
         receiptTextArea.setText(receiptText);
 
-         // PDF 생성 및 출력
-         createPDF(receiptText);
-    }
-
-    private void createPDF(String content) {
-        PDDocument document = new PDDocument();
-        PDPage page = new PDPage();
-        document.addPage(page);
-        PDType1Font fontstyle = new PDType1Font("HELVETICA_BOLD")
-        
-
-        try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
-            contentStream.setFont(PDType1Font.HELVETICA_BOLD, 12);
-            contentStream.beginText();
-            contentStream.newLineAtOffset(10, 750);
-            contentStream.showText(content);
-            contentStream.endText();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            File file = new File("receipt.pdf");
-            document.save(file);
-            Desktop.getDesktop().open(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                document.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+    
     }
 
 
