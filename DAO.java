@@ -11,7 +11,7 @@ public class DAO {
        public void insert(productVO vo) {
               prodMap.put(vo.getEmail(), vo);
        }
-   
+    
        //전달받은 상품명으로 등록된 회원정보 꺼내오기//
        public productVO selectOne(String name) {
            return prodMap.get(name);
