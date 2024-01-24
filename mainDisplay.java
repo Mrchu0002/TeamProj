@@ -26,7 +26,7 @@ public class mainDisplay {
 	public static void main(String[] args) {
 		pos();
 
-		
+		//
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {
