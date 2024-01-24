@@ -26,6 +26,7 @@ public class mainDisplay {
 	public static void main(String[] args) {
 		pos();
 
+		
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {
@@ -62,9 +63,7 @@ public class mainDisplay {
 				if(!posInput.startsWith("list")){
 					System.out.println("리스트명령문 오류");
 				}
-
 				listView lstVi = new listView();
-
 				lstVi.listview();
 				continue;
 			} else if(posInput.startsWith("printReport")) {
