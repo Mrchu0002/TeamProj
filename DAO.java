@@ -2,16 +2,17 @@ package POS;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 
 public class DAO {
        //DB 역할
-       HashMap<String , productVO> prodMap = new HashMap<String , productVO>();
+       private static Map<String , productVO> prodMap = new HashMap<String , productVO>();
    
        // 상품 추가시 저장하는 함수
        public void insert(productVO vo) {
-              prodMap.put(vo.getEmail(), vo);
+              prodMap.put(vo.getName(), vo);
        }
-   
+    
        //전달받은 상품명으로 등록된 회원정보 꺼내오기//
        public productVO selectOne(String name) {
            return prodMap.get(name);

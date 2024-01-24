@@ -1,6 +1,21 @@
 package POS;
 
 public class DTO {
+
+	private String name; // 상품명
+	private String cateId; // 분류 ID
+	private String cst; // 가격
+	private String cnt; // 재고
+
+	public DTO(String name, String cateId, String cst, String cnt) {
+
+		this.name = name;
+		this.cateId = cateId;
+		this.cst = cst;
+		this.cnt = cnt;
+
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -33,18 +48,5 @@ public class DTO {
 		this.cnt = cnt;
 	}
 
-	private String name; // 상품명
-	private String cateId; // 분류 ID
-	private String cst; // 가격
-	private String cnt; // 재고
-
-	public DTO(String name, String cateId, String cst, String cnt) {
-
-		this.name = name;
-		this.cateId = cateId;
-		this.cst = cst;
-		this.cnt = cnt;
-
-	}
-
+	
 }
