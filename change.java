@@ -7,39 +7,38 @@ public class change {
         this.dao = new DAO();
     }
 
-    public void buy(String[] posInput) {
-        String name = posInput[1];
-        String cateId = posInput[2];
-        String cst = posInput[3];
-        String cnt = posInput[4];
+    public void buy(String[] posInputs) {
+        String inputName = posInputs[1];
+        int inputCnt = Integer.parseInt(posInputs[2]);
 
-        productVO vo = dao.selectOne(cnt);
+        productVO vo = dao.selectOne(posInputs[1]);
         if (vo == null) {
             System.out.println("입력하신 상품이 존재하지 않습니다.");
             return;
         }
 
-        if (vo.getName().equals(name)) {
-            vo.setCnt(vo.getCnt() + posInput[4]);
+        if (vo.getName().equals(inputName)) {
+            int nowCnt = Integer.parseInt(vo.getCnt());
+            // vo.setCnt(nowCnt + inputCnt);
+            vo.setCnt(Integer.toString(nowCnt + inputCnt));
         } else {
             System.out.println("입력하신 상품이 존재하지 않습니다.");
+            return;
         }
 
     } // 구매
 
-    public void sell(String[] posInput ) {
-        String name = posInput[1];
-        String cateId = posInput[2];
-        int inputCst = Integer.parseInt(posInput[3]);
-        int inputCnt = Integer.parseInt(posInput[4]);
+    public void sell(String[] posInputs) {
+        String inputName = posInputs[1];
+        int inputCnt = Integer.parseInt(posInputs[2]);
 
-        productVO vo = dao.selectOne(posInput[4]);
+        productVO vo = dao.selectOne(posInputs[1]);
         if (vo == null) {
             System.out.println("입력하신 상품이 존재하지 않습니다.");
             return;
         }
 
-        if (vo.getName().equals(name)) {
+        if (vo.getName().equals(inputName)) {
             int nowCnt = Integer.parseInt(vo.getCnt());
             // vo.setCnt(nowCnt - inputCnt);
             vo.setCnt(Integer.toString(nowCnt - inputCnt));
