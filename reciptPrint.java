@@ -17,6 +17,7 @@ public class reciptPrint extends JFrame {
     private JTextArea receiptTextArea;
 
     public reciptPrint(String[] posInputs) {
+
         // 프레임 설정
         setTitle("영수증 프로그램");
         setSize(400, 600);
@@ -98,6 +99,9 @@ public class reciptPrint extends JFrame {
         String posInput = stdIn.nextLine();
         String[] posInputs = posInput.split(" ");
         
+        // 이 부분 메인에 활용할것 
+        // import javax.swing.SwingUtilities;  # 라이브러리 import
+        // SwingUtilities.invokeLater(() -> new reciptPrint(posInputs));  # 생성자 생성 실행 예약 -> 매개변수로 String[] posInputs  - 구매에 대한 영수증 출력
         SwingUtilities.invokeLater(() -> new reciptPrint(posInputs));
 
 
