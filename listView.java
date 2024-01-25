@@ -20,7 +20,7 @@ public class listView {
 
         productList.stream()
         .forEach(vo -> System.out.printf("%s : [%s], %s, %s \n",
-        vo.getCateId(), vo.getName(), vo.getCst(), vo.getCnt())); //여기 순서 바꾸고
+        vo.getName(), vo.getCateId(), vo.getCst(), vo.getCnt())); //여기 순서 바꾸고
         System.out.println("--------------------------------------------------------");
 
 }
