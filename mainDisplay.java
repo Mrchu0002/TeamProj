@@ -14,9 +14,7 @@ public class mainDisplay {
 		System.out.println("buy 상품명 수량");
 		System.out.println("");
 		System.out.println("-------------현재 보유 상품------------");
-		System.out.println("list 품목코드");
-		System.out.println("list 상품명");
-		System.out.println("list 재고");
+		System.out.println("list");
 		System.out.println("");
 		System.out.println("---------------매출 결산--------------");
 		System.out.println("\t" + " " + " " + " " + " " + "printReport\t");
