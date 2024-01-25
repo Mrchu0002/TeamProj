@@ -27,6 +27,23 @@ public class mainDisplay {
 		pos();
 		int regiCnt = 0;
 
+		
+		// 초기 기본데이터 입력
+		Sample sample = new Sample();
+		String[] rm100_cateId = sample.idSplitter(sample.getRM100());
+		String[] rm100_name = sample.nameSplitter(sample.getRM100());
+		String[] rm100_cost = sample.costSplitter(sample.getRM100());
+		String[] rm100_count = sample.contSplitter(sample.getRM100());
+
+		for (int i = 0 ; i < rm100_cateId.length ; i ++ ) {
+			// System.out.println(rm100_name[i].length() + "의 길이");
+			DTO dto = new DTO(rm100_cateId[i] , rm100_name[i] , rm100_cost[i] , rm100_count[i]);
+			RegiProd preregSrv = new RegiProd();
+				preregSrv.preregist(dto);
+		}
+		
+
+
 		//
 		Scanner sc = new Scanner(System.in);
 
@@ -42,13 +59,16 @@ public class mainDisplay {
 					pos();
 					continue;
 				}
-				regiCnt++;
+				
 
 				// 전달받은 데이터를 RequestDTO 객체에 담는다.
 				DTO dto = new DTO(posInputs[1], posInputs[2], posInputs[3], posInputs[4]);
 
 				RegiProd regSrv = new RegiProd();
 				regSrv.regist(dto);
+
+				if (regSrv.regist(dto) == 1)
+					regiCnt++;
 				System.out.println("현재 "+ regiCnt +"개의 상품이 등록되었습니다.");
 
 			} else if (posInput.compareToIgnoreCase("list") == 0) {
