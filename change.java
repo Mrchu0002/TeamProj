@@ -40,7 +40,7 @@ public class change {
         }
 
         if (vo.getName().equals(name)) {
-            vo.setCnt(cnt - posInput[4]);
+            vo.setCnt(vo.getCnt - posInput[4]);
         } else {
             System.out.println("입력하신 상품이 존재하지 않습니다.");
             return;
