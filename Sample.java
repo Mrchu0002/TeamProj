@@ -13,7 +13,7 @@ class Sample {
         };
 
     private String[] RM200 = { "201 사리곰탕 1200 30",
-        "202 나가사끼 짬뽕 1200 30",
+        "202 나가사끼짬뽕 1200 30",
         "203 꼬꼬면 1400 20",
         "204 멸치칼국수 1400 30",
         "205 북엇국라면 1200 20"
@@ -21,9 +21,9 @@ class Sample {
 
     private String[] RM300 = {
         "301 불닭 1200 50",
-        "302 신라면 볶음면 1200 30",
+        "302 신라면볶음면 1200 30",
         "303 볶음너구리 1200 30",
-        "305 틈새 볶음면 1400 20",
+        "305 틈새볶음면 1400 20",
         "306 짜파게티 1200 50",
     };
 
@@ -140,21 +140,21 @@ class Sample {
 
 
 
-public class sampleData {
+// public class sampleData {
 
 
-    public static void main(String[] args) {
-        // String[] rm100 = RM100;
-        // rm100.toString();
-        // System.out.println(rm100[1]);
-        Sample sample = new Sample();
-        String[] rm100 =  sample.getRM100();
+//     public static void main(String[] args) {
+//         // String[] rm100 = RM100;
+//         // rm100.toString();
+//         // System.out.println(rm100[1]);
+//         Sample sample = new Sample();
+//         String[] rm100 =  sample.getRM100();
 
         
-        String[] cateId = sample.idSplitter(rm100);
-        String[] name = sample.nameSplitter(rm100);
-        String[] cst = sample.costSplitter(rm100);
-        String[] cnt = sample.costSplitter(rm100);
-    }
+//         String[] cateId = sample.idSplitter(rm100);
+//         String[] name = sample.nameSplitter(rm100);
+//         String[] cst = sample.costSplitter(rm100);
+//         String[] cnt = sample.costSplitter(rm100);
+//     }
 
-}
+// }
