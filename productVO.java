@@ -20,19 +20,19 @@ public class productVO {
     }
 
     public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCateId() {
         return cateId;
     }
 
+    public void setName(String name) {
+        this.name = cateId;
+    }
+
+    public String getCateId() {
+        return name;
+    }
+
     public void setCateId(String cateId) {
-        this.cateId = cateId;
+        this.cateId = name;
     }
 
     public String getCst() {
