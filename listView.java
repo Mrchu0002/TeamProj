@@ -11,11 +11,12 @@ public class listView {
         
         System.out.println("상품 목록");
         System.out.println("--------------------------------------------------------");
-        System.out.println("| 상품명 | 분류 | 가격 | 재고 |");
+        System.out.println("|   상품명   |   분류   |   가격   |   재고   |");
+        System.out.println("--------------------------------------------------------");
 
 
         productList.stream()
-        .forEach(vo -> System.out.printf("| %s | %s | %s | %s |\n",
+        .forEach(vo -> System.out.printf("| %s |    %s   |   %s   |    %s    |\n",
         vo.getName() , vo.getCateId(), vo.getCst() , vo.getCnt()));
         System.out.println("--------------------------------------------------------");
 
