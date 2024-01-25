@@ -9,7 +9,7 @@ public class RegiProd {
     this.dao = new DAO();
   }
 
-  public int regist(DTO dto) {
+  public int regist(DTO dto) { // 출력형 int 형으로 바꾼 이유  < -- add 시 실행되는데 추가한 건수 카운트용으로
 
     productVO vo = new productVO(dto.getName(), dto.getCateId(), dto.getCst(), dto.getCnt());
 
